@@ -5,9 +5,8 @@ var openWeatherMap = require('openWeatherMap');
 
 var Weather = React.createClass({
     getInitialState: function(){
-        return { //default values for testing
-            location: 'Miami',
-            temp: 88
+        return { 
+            isLoading: false
         }
     },
 
@@ -17,24 +16,36 @@ var Weather = React.createClass({
         //     temp: 23
         // })
         var that = this;
+        this.setState({ isLoading:true });
+
         openWeatherMap.getTemp(location).then(function(temp){
                 that.setState({ //.this get lost because chaining functions, we use this=that to keep reference
                     location: location,
-                    temp: temp
+                    temp: temp,
+                    isLoading: false
                 })
             }, function(errorMessage){
-                alert(errorMessage); //TODO
+                alert(errorMessage);
+                that.setState({isLoading : false}) //TODO
         });
     },
 
     render: function(){
-        var {temp, location} = this.state;
+        var {isLoading, temp, location} = this.state;
+
+        function renderMessage() {
+            if(isLoading) {
+                return <h3>Fetching weather ...</h3>;
+            } else if (temp && location) {
+                return <WeatherMessage temp={temp} location={location}/>; 
+            }
+        }
 
         return(
             <div>
                 <h3>Weather component</h3>
                 <WeatherForm onSearch={this.handleSearch}/>
-                <WeatherMessage temp={temp} location={location}/>
+                {renderMessage()}
             </div>
         );
     }

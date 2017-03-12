@@ -8,8 +8,6 @@ module.exports= {
     getTemp: function(location){
         var encodedLocation = encodeURIComponent(location);
         var requestUrl = `${OPEN_WEATHER_MAP_URL}${API_KEY}&q=${encodedLocation}`;
-        console.log(OpenWeatherKey);
-        console.log(requestUrl);
 
         return axios.get(requestUrl).then( function(res){ //API success, but city is not guaranteed
             if (res.data.cod && res.data.message) {
