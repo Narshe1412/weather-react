@@ -1,7 +1,7 @@
 var React = require('react');
 
-var WeatherMessage = (props) => {
-    var {temp, location} = props;
+//var WeatherMessage = (props) => { destructuring as follows
+var WeatherMessage = ({temp, location}) => {
     return(
         <h3>It's {temp} on {location} city.</h3>
     );
