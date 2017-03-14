@@ -1,5 +1,3 @@
 node_modules/
-bundle.js
-public/bundle.js
 .vscode/
 keys.jsx
