@@ -4,7 +4,7 @@ var {Link} = require('react-router');
 var Examples = (props) => {
         return(
             <div>
-                <h1 className="text-center">Examples stateless component</h1>
+                <h1 className="text-center">Examples</h1>
                 <p>Sample locations you can search for:</p>
                 <ol>
                     <li>
