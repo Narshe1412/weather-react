@@ -1,6 +1,6 @@
 var axios = require('axios');
-var OpenWeatherKey = require('../../keys.jsx');
-const API_KEY = OpenWeatherKey.module.OpenWeatherKey;
+//var OpenWeatherKey = require('../../keys.jsx');
+const API_KEY = '0fdc07b79d98b893a536bb201860fbf3'//OpenWeatherKey.module.OpenWeatherKey;
 
 const OPEN_WEATHER_MAP_URL = 'http://api.openweathermap.org/data/2.5/weather?&units=metric&appid=';
 
