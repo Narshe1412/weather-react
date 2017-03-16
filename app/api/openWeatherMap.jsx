@@ -18,6 +18,7 @@ module.exports= {
 
         }, function(err){
            // throw new Error(res.data.message); //API fails
+           //console.log(err.data.message);
            throw new Error('Unable to fetch weather for that location.');
         });
     }
