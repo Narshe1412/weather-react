@@ -16,8 +16,9 @@ module.exports= {
                 return res.data.main.temp; //city returned, temparature return
             }
 
-        }, function(res){
-            throw new Error(res.data.message); //API fails
+        }, function(err){
+           // throw new Error(res.data.message); //API fails
+           throw new Error('Unable to fetch weather for that location.');
         });
     }
 }
