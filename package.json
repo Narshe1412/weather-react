@@ -14,7 +14,7 @@
   "dependencies": {
     "axios": "^0.21.0",
     "express": "^4.14.1",
-    "react": "^0.14.7",
+    "react": "^15.0.0",
     "react-dom": "^0.14.7",
     "react-router": "^2.0.0",
     "snyk": "^1.316.1"
@@ -28,7 +28,7 @@
     "css-loader": "^1.0.0",
     "foundation-sites": "6.6.2",
     "jquery": "^3.0.0",
-    "node-sass": "^4.5.0",
+    "node-sass": "^7.0.2",
     "sass-loader": "^6.0.3",
     "script-loader": "^0.7.2",
     "style-loader": "^0.23.1",
